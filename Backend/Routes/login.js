@@ -36,6 +36,7 @@ router.post('/login', async(req,res)=>{
 
 router.post('/register', async(req,res)=>{
     const{name,email,DOB,password,role} = req.body
+    console.log(name)
     try {
         const userExist = await userModel.findOne({email})
 
