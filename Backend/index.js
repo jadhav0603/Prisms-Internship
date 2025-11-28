@@ -4,15 +4,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-
-app.use(express.json())
-app.use(cors())
-
 const loginRoute = require('./Routes/login')
 
 
+app.use(express.json())
+
+
 app.use(cors({
-    origin: ["http://localhost:5173", "https://prisms-internship.onrender.com"],
+    origin: ["http://localhost:5173", "https://prisms-internship-frontend.onrender.com"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true
 }));
