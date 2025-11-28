@@ -32,7 +32,7 @@ const Register = () => {
     const handleRegister = async(e)=>{
         e.preventDefault()
         try {
-            const response = await axios.post('https://prisms-internship-lsi4.onrender.com/register', {
+            const response = await axios.post('https://prisms-internship-wygp.onrender.com/register', {
                 name:userName,email,DOB,password,role:roleValue})
 
                 console.log(response.data)
