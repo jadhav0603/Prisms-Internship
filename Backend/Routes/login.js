@@ -35,6 +35,8 @@ router.post('/login', async(req,res)=>{
 
 
 router.post('/register', async(req,res)=>{
+     console.log("BODY = ", req.body);
+     
     const{name,email,DOB,password,role} = req.body
     console.log(name)
     try {
@@ -46,7 +48,7 @@ router.post('/register', async(req,res)=>{
 
         const hashpass = await bcrypt.hash(password, 10)
 
-        const newUser = new userModel({name,email,DOB,password:hashpass,role})
+        const newUser = new userModel({name,email,DOB:new Date(DOB),password:hashpass,role})
         await newUser.save()
 
         return res.status(200).json({message : 'User Sucessfully Registered'})
