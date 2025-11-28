@@ -12,7 +12,7 @@ app.use(express.json())
 
 
 app.use(cors({
-    origin: ["http://localhost:5173", "https://prisms-internship.onrender.com","https://prisms-internship-wygp.onrender.com"],
+    origin: ["http://localhost:5173", "https://prisms-internship-frontend.onrender.com","https://prisms-internship-wygp.onrender.com"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true
 }));
